@@ -22,13 +22,13 @@ parquet_file = dataset_file.replace('.csv', '.parquet')
 
 # BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
 
-
-def format_to_parquet(src_file):
-    if not src_file.endswith('.csv'):
-        logging.error("Can only accept source files in CSV format, for the moment")
-        return
-    table = pv.read_csv(src_file)
-    pq.write_table(table, src_file.replace('.csv', '.parquet'))
+#
+# def format_to_parquet(src_file):
+#     if not src_file.endswith('.csv'):
+#         logging.error("Can only accept source files in CSV format, for the moment")
+#         return
+#     table = pv.read_csv(src_file)
+#     pq.write_table(table, src_file.replace('.csv', '.parquet'))
 
 
 # NOTE: takes 20 mins, at an upload speed of 800kbps. Faster if your internet has a better upload speed
@@ -60,7 +60,7 @@ with DAG(
     schedule_interval="0 0 1 * *",
     start_date=datetime(2019, 1, 1),
     tags=['dtc-de'],
-    max_active_runs=1,
+    max_active_runs=3,
 ) as dag:
 
     download_dataset_task = BashOperator(
@@ -68,13 +68,13 @@ with DAG(
         bash_command=f"curl -sS {dataset_url} > {path_to_local_home}/{dataset_file}"
     )
 
-    format_to_parquet_task = PythonOperator(
-        task_id="format_to_parquet_task",
-        python_callable=format_to_parquet,
-        op_kwargs={
-            "src_file": f"{path_to_local_home}/{dataset_file}",
-        },
-    )
+    # format_to_parquet_task = PythonOperator(
+    #     task_id="format_to_parquet_task",
+    #     python_callable=format_to_parquet,
+    #     op_kwargs={
+    #         "src_file": f"{path_to_local_home}/{dataset_file}",
+    #     },
+    # )
 
     # TODO: Homework - research and try XCOM to communicate output values between 2 tasks/operators
     local_to_gcs_task = PythonOperator(
@@ -82,8 +82,8 @@ with DAG(
         python_callable=upload_to_gcs,
         op_kwargs={
             "bucket": BUCKET,
-            "object_name": f"raw/{parquet_file}",
-            "local_file": f"{path_to_local_home}/{parquet_file}",
+            "object_name": f"raw/{dataset_file}",
+            "local_file": f"{path_to_local_home}/{dataset_file}",
         },
     )
 
@@ -102,4 +102,5 @@ with DAG(
     #     },
     # )
 
-    download_dataset_task >> format_to_parquet_task >> local_to_gcs_task
+    # download_dataset_task >> format_to_parquet_task >> local_to_gcs_task
+    download_dataset_task >> local_to_gcs_task

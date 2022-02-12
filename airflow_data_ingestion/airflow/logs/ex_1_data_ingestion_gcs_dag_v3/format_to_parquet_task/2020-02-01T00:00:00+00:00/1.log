@@ -23,3 +23,53 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-01T00:00:00+00:00
 [2022-02-02 18:48:36,716] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=ex_1_data_ingestion_gcs_dag_v3, task_id=format_to_parquet_task, execution_date=20200201T000000, start_date=20220202T184832, end_date=20220202T184836
 [2022-02-02 18:48:37,076] {local_task_job.py:154} INFO - Task exited with return code 0
 [2022-02-02 18:48:37,119] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-02-10 13:19:08,015] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [queued]>
+[2022-02-10 13:19:08,031] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [queued]>
+[2022-02-10 13:19:08,032] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 13:19:08,033] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-10 13:19:08,034] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 13:19:08,047] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2020-02-01 00:00:00+00:00
+[2022-02-10 13:19:08,054] {standard_task_runner.py:52} INFO - Started process 2326 to run task
+[2022-02-10 13:19:08,059] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'ex_1_data_ingestion_gcs_dag_v3', 'format_to_parquet_task', 'scheduled__2020-02-01T00:00:00+00:00', '--job-id', '700', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_hw_1_ex.py', '--cfg-path', '/tmp/tmpg_3rkda_', '--error-file', '/tmp/tmp28gcgw9x']
+[2022-02-10 13:19:08,062] {standard_task_runner.py:77} INFO - Job 700: Subtask format_to_parquet_task
+[2022-02-10 13:19:08,134] {logging_mixin.py:109} INFO - Running <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [running]> on host e30f201fae61
+[2022-02-10 13:19:08,181] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-02-10 13:19:08,207] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ex_1_data_ingestion_gcs_dag_v3
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2020-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-01T00:00:00+00:00
+[2022-02-10 13:19:12,123] {python.py:175} INFO - Done. Returned value was: None
+[2022-02-10 13:19:12,138] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=ex_1_data_ingestion_gcs_dag_v3, task_id=format_to_parquet_task, execution_date=20200201T000000, start_date=20220210T131908, end_date=20220210T131912
+[2022-02-10 13:19:12,428] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-10 13:19:12,467] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-02-10 15:39:58,640] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [queued]>
+[2022-02-10 15:39:58,669] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [queued]>
+[2022-02-10 15:39:58,670] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:39:58,672] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-10 15:39:58,674] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:39:58,708] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 2020-02-01 00:00:00+00:00
+[2022-02-10 15:39:58,724] {standard_task_runner.py:52} INFO - Started process 797 to run task
+[2022-02-10 15:39:58,731] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'ex_1_data_ingestion_gcs_dag_v3', 'format_to_parquet_task', 'scheduled__2020-02-01T00:00:00+00:00', '--job-id', '825', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_hw_1_ex.py', '--cfg-path', '/tmp/tmp070vtnw4', '--error-file', '/tmp/tmp9gyepuel']
+[2022-02-10 15:39:58,741] {standard_task_runner.py:77} INFO - Job 825: Subtask format_to_parquet_task
+[2022-02-10 15:39:58,910] {logging_mixin.py:109} INFO - Running <TaskInstance: ex_1_data_ingestion_gcs_dag_v3.format_to_parquet_task scheduled__2020-02-01T00:00:00+00:00 [running]> on host 276a0ad90304
+[2022-02-10 15:39:58,970] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-02-10 15:39:59,025] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ex_1_data_ingestion_gcs_dag_v3
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=2020-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-01T00:00:00+00:00
+[2022-02-10 15:40:06,710] {python.py:175} INFO - Done. Returned value was: None
+[2022-02-10 15:40:06,730] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=ex_1_data_ingestion_gcs_dag_v3, task_id=format_to_parquet_task, execution_date=20200201T000000, start_date=20220210T153958, end_date=20220210T154006
+[2022-02-10 15:40:07,062] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-10 15:40:07,120] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
