@@ -1,0 +1,95 @@
+[2022-02-18 12:54:26,305] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_2_gcs_dag.gcs_2_green_gcs_task manual__2022-02-18T12:53:35.443132+00:00 [queued]>
+[2022-02-18 12:54:26,317] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_2_gcs_dag.gcs_2_green_gcs_task manual__2022-02-18T12:53:35.443132+00:00 [queued]>
+[2022-02-18 12:54:26,317] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-18 12:54:26,318] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-02-18 12:54:26,319] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-18 12:54:26,335] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): gcs_2_green_gcs_task> on 2022-02-18 12:53:35.443132+00:00
+[2022-02-18 12:54:26,339] {standard_task_runner.py:52} INFO - Started process 1215 to run task
+[2022-02-18 12:54:26,343] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_2_gcs_dag', 'gcs_2_green_gcs_task', 'manual__2022-02-18T12:53:35.443132+00:00', '--job-id', '1075', '--raw', '--subdir', 'DAGS_FOLDER/data-2-gcs-dag.py', '--cfg-path', '/tmp/tmp1zux5xjr', '--error-file', '/tmp/tmpkxforn61']
+[2022-02-18 12:54:26,344] {standard_task_runner.py:77} INFO - Job 1075: Subtask gcs_2_green_gcs_task
+[2022-02-18 12:54:26,404] {logging_mixin.py:109} INFO - Running <TaskInstance: data_2_gcs_dag.gcs_2_green_gcs_task manual__2022-02-18T12:53:35.443132+00:00 [running]> on host 853fb9201673
+[2022-02-18 12:54:26,464] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_2_gcs_dag
+AIRFLOW_CTX_TASK_ID=gcs_2_green_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-18T12:53:35.443132+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-18T12:53:35.443132+00:00
+[2022-02-18 12:54:26,466] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-18 12:54:26,467] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-18 12:54:26,819] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-04.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-04.csv
+[2022-02-18 12:54:27,430] {gcs.py:251} INFO - Total Bytes: 47348207 | Bytes Written: 47348207
+[2022-02-18 12:54:27,431] {gcs.py:264} INFO - Object raw/green_tripdata_2019-04.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-04.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:27,432] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-07.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-07.csv
+[2022-02-18 12:54:27,782] {gcs.py:251} INFO - Total Bytes: 43143777 | Bytes Written: 43143777
+[2022-02-18 12:54:27,783] {gcs.py:264} INFO - Object raw/green_tripdata_2019-07.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-07.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:27,784] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-05.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-05.csv
+[2022-02-18 12:54:28,139] {gcs.py:251} INFO - Total Bytes: 46448105 | Bytes Written: 46448105
+[2022-02-18 12:54:28,140] {gcs.py:264} INFO - Object raw/green_tripdata_2019-05.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-05.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:28,141] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-04.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-04.csv
+[2022-02-18 12:54:28,512] {gcs.py:251} INFO - Total Bytes: 3210216 | Bytes Written: 3210216
+[2022-02-18 12:54:28,513] {gcs.py:264} INFO - Object raw/green_tripdata_2020-04.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-04.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:28,515] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-01.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-01.csv
+[2022-02-18 12:54:28,859] {gcs.py:251} INFO - Total Bytes: 57150546 | Bytes Written: 57150546
+[2022-02-18 12:54:28,860] {gcs.py:264} INFO - Object raw/green_tripdata_2019-01.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-01.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:28,861] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-06.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-06.csv
+[2022-02-18 12:54:29,277] {gcs.py:251} INFO - Total Bytes: 43354841 | Bytes Written: 43354841
+[2022-02-18 12:54:29,278] {gcs.py:264} INFO - Object raw/green_tripdata_2019-06.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-06.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:29,279] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-02.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-02.csv
+[2022-02-18 12:54:29,722] {gcs.py:251} INFO - Total Bytes: 36427762 | Bytes Written: 36427762
+[2022-02-18 12:54:29,723] {gcs.py:264} INFO - Object raw/green_tripdata_2020-02.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-02.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:29,723] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-06.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-06.csv
+[2022-02-18 12:54:30,096] {gcs.py:251} INFO - Total Bytes: 5689051 | Bytes Written: 5689051
+[2022-02-18 12:54:30,097] {gcs.py:264} INFO - Object raw/green_tripdata_2020-06.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-06.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:30,098] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-03.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-03.csv
+[2022-02-18 12:54:30,506] {gcs.py:251} INFO - Total Bytes: 55279989 | Bytes Written: 55279989
+[2022-02-18 12:54:30,507] {gcs.py:264} INFO - Object raw/green_tripdata_2019-03.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-03.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:30,508] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-10.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-10.csv
+[2022-02-18 12:54:30,856] {gcs.py:251} INFO - Total Bytes: 8594676 | Bytes Written: 8594676
+[2022-02-18 12:54:30,857] {gcs.py:264} INFO - Object raw/green_tripdata_2020-10.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-10.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:30,857] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-02.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-02.csv
+[2022-02-18 12:54:31,212] {gcs.py:251} INFO - Total Bytes: 52931812 | Bytes Written: 52931812
+[2022-02-18 12:54:31,213] {gcs.py:264} INFO - Object raw/green_tripdata_2019-02.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-02.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:31,214] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-11.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-11.csv
+[2022-02-18 12:54:31,803] {gcs.py:251} INFO - Total Bytes: 8008450 | Bytes Written: 8008450
+[2022-02-18 12:54:31,804] {gcs.py:264} INFO - Object raw/green_tripdata_2020-11.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-11.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:31,805] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-12.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-12.csv
+[2022-02-18 12:54:32,172] {gcs.py:251} INFO - Total Bytes: 41147811 | Bytes Written: 41147811
+[2022-02-18 12:54:32,174] {gcs.py:264} INFO - Object raw/green_tripdata_2019-12.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-12.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:32,175] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-07.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-07.csv
+[2022-02-18 12:54:32,556] {gcs.py:251} INFO - Total Bytes: 6531544 | Bytes Written: 6531544
+[2022-02-18 12:54:32,557] {gcs.py:264} INFO - Object raw/green_tripdata_2020-07.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-07.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:32,558] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-05.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-05.csv
+[2022-02-18 12:54:32,903] {gcs.py:251} INFO - Total Bytes: 5124005 | Bytes Written: 5124005
+[2022-02-18 12:54:32,904] {gcs.py:264} INFO - Object raw/green_tripdata_2020-05.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-05.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:32,905] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-08.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-08.csv
+[2022-02-18 12:54:33,249] {gcs.py:251} INFO - Total Bytes: 41172572 | Bytes Written: 41172572
+[2022-02-18 12:54:33,251] {gcs.py:264} INFO - Object raw/green_tripdata_2019-08.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-08.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:33,252] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-09.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-09.csv
+[2022-02-18 12:54:33,598] {gcs.py:251} INFO - Total Bytes: 7954036 | Bytes Written: 7954036
+[2022-02-18 12:54:33,600] {gcs.py:264} INFO - Object raw/green_tripdata_2020-09.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-09.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:33,602] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-11.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-11.csv
+[2022-02-18 12:54:33,956] {gcs.py:251} INFO - Total Bytes: 41115708 | Bytes Written: 41115708
+[2022-02-18 12:54:33,957] {gcs.py:264} INFO - Object raw/green_tripdata_2019-11.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-11.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:33,959] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-10.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-10.csv
+[2022-02-18 12:54:34,308] {gcs.py:251} INFO - Total Bytes: 43540725 | Bytes Written: 43540725
+[2022-02-18 12:54:34,309] {gcs.py:264} INFO - Object raw/green_tripdata_2019-10.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-10.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:34,311] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-01.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-01.csv
+[2022-02-18 12:54:34,710] {gcs.py:251} INFO - Total Bytes: 40697160 | Bytes Written: 40697160
+[2022-02-18 12:54:34,712] {gcs.py:264} INFO - Object raw/green_tripdata_2020-01.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-01.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:34,713] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-12.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-12.csv
+[2022-02-18 12:54:35,061] {gcs.py:251} INFO - Total Bytes: 7515599 | Bytes Written: 7515599
+[2022-02-18 12:54:35,062] {gcs.py:264} INFO - Object raw/green_tripdata_2020-12.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-12.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:35,063] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-08.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-08.csv
+[2022-02-18 12:54:35,408] {gcs.py:251} INFO - Total Bytes: 7322715 | Bytes Written: 7322715
+[2022-02-18 12:54:35,409] {gcs.py:264} INFO - Object raw/green_tripdata_2020-08.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-08.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:35,410] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2019-09.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2019-09.csv
+[2022-02-18 12:54:35,754] {gcs.py:251} INFO - Total Bytes: 41124323 | Bytes Written: 41124323
+[2022-02-18 12:54:35,755] {gcs.py:264} INFO - Object raw/green_tripdata_2019-09.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2019-09.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:35,756] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/green_tripdata_2020-03.csv to gs://dtc_data_lake_vaulted-art-339212/green/green_tripdata_2020-03.csv
+[2022-02-18 12:54:36,095] {gcs.py:251} INFO - Total Bytes: 20189664 | Bytes Written: 20189664
+[2022-02-18 12:54:36,096] {gcs.py:264} INFO - Object raw/green_tripdata_2020-03.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object green/green_tripdata_2020-03.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:54:36,108] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_2_gcs_dag, task_id=gcs_2_green_gcs_task, execution_date=20220218T125335, start_date=20220218T125426, end_date=20220218T125436
+[2022-02-18 12:54:36,134] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-18 12:54:36,173] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -58,6 +58,7 @@ default_args = {
     "retries": 1,
 }
 
+
 # NOTE: DAG declaration - using a Context Manager (an implicit way)
 with DAG(
     dag_id="data_ingestion_gcs_dag",

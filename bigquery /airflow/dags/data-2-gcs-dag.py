@@ -14,6 +14,8 @@ BUCKET = os.environ.get("GCP_GCS_BUCKET")
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'trips_data_all')
 
+COLOUR_RANGE = {'yellow': 'tpep_pickup_datetime', 'green': 'lpep_pickup_datetime'}
+
 default_args = {
     "owner": "airflow",
     "start_date": days_ago(1),
@@ -30,45 +32,46 @@ with DAG(
     tags=['dtc-de'],
 ) as dag:
 
-    gcs_2_gcs_task = move_files = GCSToGCSOperator(
-        task_id='gcs_2_gcs_task',
-        source_bucket=BUCKET,
-        source_object="raw/yellow_tripdata*.csv",
-        destination_object="yellow/yellow_tripdata",
-        destination_bucket=BUCKET,
-        move_object=False
-    )
+    for color, ds_col in COLOUR_RANGE.items():
+        gcs_2_gcs_task = move_files = GCSToGCSOperator(
+            task_id=f'gcs_2_{color}_gcs_task',
+            source_bucket=BUCKET,
+            source_object=f"raw/{color}_tripdata*.csv",
+            destination_object=f"{color}/{color}_tripdata",
+            destination_bucket=BUCKET,
+            move_object=False
+        )
 
-    gcs_2_bq_ext_task = BigQueryCreateExternalTableOperator(
-        task_id="bigquery_external_table_task",
-        table_resource={
-            "tableReference": {
-                "projectId": PROJECT_ID,
-                "datasetId": BIGQUERY_DATASET,
-                "tableId": "external_yellow_trip_table",
+        gcs_2_bq_ext_task = BigQueryCreateExternalTableOperator(
+            task_id=f"bigquery_{color}_external_table_task",
+            table_resource={
+                "tableReference": {
+                    "projectId": PROJECT_ID,
+                    "datasetId": BIGQUERY_DATASET,
+                    "tableId": f"external_{color}_trip_table",
+                },
+                "externalDataConfiguration": {
+                    "autodetect": True,
+                    "sourceFormat": "CSV",
+                    "sourceUris": [f"gs://{BUCKET}/{color}/*"],
+                },
             },
-            "externalDataConfiguration": {
-                "autodetect": True,
-                "sourceFormat": "CSV",
-                "sourceUris": [f"gs://{BUCKET}/yellow/*"],
-            },
-        },
-    )
+        )
 
-    CREATE_PART_TBL_QUERY = f"""CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.yellow_tripdata_partitoned_clustered
-        PARTITION BY DATE(tpep_pickup_datetime)
-        CLUSTER BY VendorID AS
-        SELECT * FROM {BIGQUERY_DATASET}.external_yellow_trip_table"""
+        CREATE_PART_TBL_QUERY = f"""CREATE OR REPLACE TABLE {BIGQUERY_DATASET}.{color}_tripdata_partitoned_clustered
+            PARTITION BY DATE({ds_col})
+            CLUSTER BY VendorID AS
+            SELECT * FROM {BIGQUERY_DATASET}.external_{color}_trip_table"""
 
-    bq_ext_2_part_task = BigQueryInsertJobOperator(
-        task_id='bq_ext_2_part_task',
-        configuration={
-            "query": {
-                "query": CREATE_PART_TBL_QUERY,
-                "useLegacySql": False,
+        bq_ext_2_part_task = BigQueryInsertJobOperator(
+            task_id=f'bq_{color}_ext_2_part_task',
+            configuration={
+                "query": {
+                    "query": CREATE_PART_TBL_QUERY,
+                    "useLegacySql": False,
+                }
             }
-        }
 
-    )
+        )
 
-    gcs_2_gcs_task >> gcs_2_bq_ext_task >> bq_ext_2_part_task
+        gcs_2_gcs_task >> gcs_2_bq_ext_task >> bq_ext_2_part_task

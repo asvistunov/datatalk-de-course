@@ -1,0 +1,35 @@
+[2022-02-12 11:01:29,607] {processor.py:163} INFO - Started process (PID=40) to work on /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:01:29,610] {processor.py:642} INFO - Processing file /opt/airflow/dags/data_ingestion_hw_1_ex.py for tasks to queue
+[2022-02-12 11:01:29,611] {logging_mixin.py:109} INFO - [2022-02-12 11:01:29,611] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:01:31,136] {processor.py:654} INFO - DAG(s) dict_keys(['ex_1_data_ingestion_gcs_dag_v3']) retrieved from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:01:31,151] {logging_mixin.py:109} INFO - [2022-02-12 11:01:31,150] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-12 11:01:31,176] {logging_mixin.py:109} INFO - [2022-02-12 11:01:31,175] {dag.py:2935} INFO - Setting next_dagrun for ex_1_data_ingestion_gcs_dag_v3 to 2022-02-01T00:00:00+00:00
+[2022-02-12 11:01:31,189] {processor.py:171} INFO - Processing /opt/airflow/dags/data_ingestion_hw_1_ex.py took 1.585 seconds
+[2022-02-12 11:02:01,344] {processor.py:163} INFO - Started process (PID=79) to work on /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:01,347] {processor.py:642} INFO - Processing file /opt/airflow/dags/data_ingestion_hw_1_ex.py for tasks to queue
+[2022-02-12 11:02:01,348] {logging_mixin.py:109} INFO - [2022-02-12 11:02:01,348] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:02,155] {processor.py:654} INFO - DAG(s) dict_keys(['ex_1_data_ingestion_gcs_dag_v3']) retrieved from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:02,164] {logging_mixin.py:109} INFO - [2022-02-12 11:02:02,164] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-12 11:02:02,184] {logging_mixin.py:109} INFO - [2022-02-12 11:02:02,184] {dag.py:2935} INFO - Setting next_dagrun for ex_1_data_ingestion_gcs_dag_v3 to 2022-02-01T00:00:00+00:00
+[2022-02-12 11:02:02,194] {processor.py:171} INFO - Processing /opt/airflow/dags/data_ingestion_hw_1_ex.py took 0.853 seconds
+[2022-02-12 11:02:32,279] {processor.py:163} INFO - Started process (PID=133) to work on /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:32,281] {processor.py:642} INFO - Processing file /opt/airflow/dags/data_ingestion_hw_1_ex.py for tasks to queue
+[2022-02-12 11:02:32,282] {logging_mixin.py:109} INFO - [2022-02-12 11:02:32,282] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:33,005] {processor.py:654} INFO - DAG(s) dict_keys(['ex_1_data_ingestion_gcs_dag_v3']) retrieved from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:02:33,015] {logging_mixin.py:109} INFO - [2022-02-12 11:02:33,014] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-12 11:02:33,034] {logging_mixin.py:109} INFO - [2022-02-12 11:02:33,034] {dag.py:2935} INFO - Setting next_dagrun for ex_1_data_ingestion_gcs_dag_v3 to 2022-02-01T00:00:00+00:00
+[2022-02-12 11:02:33,044] {processor.py:171} INFO - Processing /opt/airflow/dags/data_ingestion_hw_1_ex.py took 0.769 seconds
+[2022-02-12 11:03:03,447] {processor.py:163} INFO - Started process (PID=187) to work on /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:03,450] {processor.py:642} INFO - Processing file /opt/airflow/dags/data_ingestion_hw_1_ex.py for tasks to queue
+[2022-02-12 11:03:03,453] {logging_mixin.py:109} INFO - [2022-02-12 11:03:03,453] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:04,431] {processor.py:654} INFO - DAG(s) dict_keys(['ex_1_data_ingestion_gcs_dag_v3']) retrieved from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:04,449] {logging_mixin.py:109} INFO - [2022-02-12 11:03:04,449] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-12 11:03:04,473] {logging_mixin.py:109} INFO - [2022-02-12 11:03:04,473] {dag.py:2935} INFO - Setting next_dagrun for ex_1_data_ingestion_gcs_dag_v3 to 2022-02-01T00:00:00+00:00
+[2022-02-12 11:03:04,488] {processor.py:171} INFO - Processing /opt/airflow/dags/data_ingestion_hw_1_ex.py took 1.047 seconds
+[2022-02-12 11:03:35,292] {processor.py:163} INFO - Started process (PID=229) to work on /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:35,296] {processor.py:642} INFO - Processing file /opt/airflow/dags/data_ingestion_hw_1_ex.py for tasks to queue
+[2022-02-12 11:03:35,297] {logging_mixin.py:109} INFO - [2022-02-12 11:03:35,297] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:36,331] {processor.py:654} INFO - DAG(s) dict_keys(['ex_1_data_ingestion_gcs_dag_v3']) retrieved from /opt/airflow/dags/data_ingestion_hw_1_ex.py
+[2022-02-12 11:03:36,346] {logging_mixin.py:109} INFO - [2022-02-12 11:03:36,346] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-12 11:03:36,371] {logging_mixin.py:109} INFO - [2022-02-12 11:03:36,371] {dag.py:2935} INFO - Setting next_dagrun for ex_1_data_ingestion_gcs_dag_v3 to 2022-02-01T00:00:00+00:00
+[2022-02-12 11:03:36,384] {processor.py:171} INFO - Processing /opt/airflow/dags/data_ingestion_hw_1_ex.py took 1.099 seconds

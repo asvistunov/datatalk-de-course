@@ -1,0 +1,163 @@
+[2022-02-10 15:18:56,280] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_2_gcs_dag.gcs_2_gcs_task manual__2022-02-09T17:38:34.887651+00:00 [queued]>
+[2022-02-10 15:18:56,296] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_2_gcs_dag.gcs_2_gcs_task manual__2022-02-09T17:38:34.887651+00:00 [queued]>
+[2022-02-10 15:18:56,297] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:18:56,299] {taskinstance.py:1239} INFO - Starting attempt 4 of 5
+[2022-02-10 15:18:56,301] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-10 15:18:56,317] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): gcs_2_gcs_task> on 2022-02-09 17:38:34.887651+00:00
+[2022-02-10 15:18:56,323] {standard_task_runner.py:52} INFO - Started process 611 to run task
+[2022-02-10 15:18:56,328] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_2_gcs_dag', 'gcs_2_gcs_task', 'manual__2022-02-09T17:38:34.887651+00:00', '--job-id', '776', '--raw', '--subdir', 'DAGS_FOLDER/data-2-gcs-dag.py', '--cfg-path', '/tmp/tmpog55_68o', '--error-file', '/tmp/tmpp17yy2a2']
+[2022-02-10 15:18:56,331] {standard_task_runner.py:77} INFO - Job 776: Subtask gcs_2_gcs_task
+[2022-02-10 15:18:56,437] {logging_mixin.py:109} INFO - Running <TaskInstance: data_2_gcs_dag.gcs_2_gcs_task manual__2022-02-09T17:38:34.887651+00:00 [running]> on host 833dbae3a330
+[2022-02-10 15:18:56,535] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_2_gcs_dag
+AIRFLOW_CTX_TASK_ID=gcs_2_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-09T17:38:34.887651+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-09T17:38:34.887651+00:00
+[2022-02-10 15:18:56,538] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-10 15:18:56,540] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-10 15:18:56,878] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-09.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-09.parquet
+[2022-02-10 15:18:57,252] {gcs.py:251} INFO - Total Bytes: 25539450 | Bytes Written: 25539450
+[2022-02-10 15:18:57,254] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-09.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-09.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:57,345] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-09.parquet deleted.
+[2022-02-10 15:18:57,347] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-10.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-10.parquet
+[2022-02-10 15:18:57,499] {gcs.py:251} INFO - Total Bytes: 130950231 | Bytes Written: 130950231
+[2022-02-10 15:18:57,501] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-10.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-10.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:57,603] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-10.parquet deleted.
+[2022-02-10 15:18:57,604] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-08.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-08.parquet
+[2022-02-10 15:18:57,992] {gcs.py:251} INFO - Total Bytes: 19636193 | Bytes Written: 19636193
+[2022-02-10 15:18:57,995] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-08.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-08.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:58,089] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-08.parquet deleted.
+[2022-02-10 15:18:58,091] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-12.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-12.parquet
+[2022-02-10 15:18:58,234] {gcs.py:251} INFO - Total Bytes: 27480890 | Bytes Written: 27480890
+[2022-02-10 15:18:58,236] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-12.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-12.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:58,330] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-12.parquet deleted.
+[2022-02-10 15:18:58,331] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2022-02.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2022-02.parquet
+[2022-02-10 15:18:58,465] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:18:58,466] {gcs.py:264} INFO - Object raw/yellow_tripdata_2022-02.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2022-02.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:58,571] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2022-02.parquet deleted.
+[2022-02-10 15:18:58,573] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-11.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-11.parquet
+[2022-02-10 15:18:58,928] {gcs.py:251} INFO - Total Bytes: 28375709 | Bytes Written: 28375709
+[2022-02-10 15:18:58,930] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-11.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-11.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:59,019] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-11.parquet deleted.
+[2022-02-10 15:18:59,021] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-02.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-02.parquet
+[2022-02-10 15:18:59,440] {gcs.py:251} INFO - Total Bytes: 113958025 | Bytes Written: 113958025
+[2022-02-10 15:18:59,442] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-02.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-02.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:59,523] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-02.parquet deleted.
+[2022-02-10 15:18:59,524] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-07.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-07.parquet
+[2022-02-10 15:18:59,778] {gcs.py:251} INFO - Total Bytes: 52878923 | Bytes Written: 52878923
+[2022-02-10 15:18:59,781] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-07.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-07.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:18:59,874] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-07.parquet deleted.
+[2022-02-10 15:18:59,876] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-06.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-06.parquet
+[2022-02-10 15:19:00,261] {gcs.py:251} INFO - Total Bytes: 11323874 | Bytes Written: 11323874
+[2022-02-10 15:19:00,263] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-06.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-06.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:00,567] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-06.parquet deleted.
+[2022-02-10 15:19:00,568] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-06.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-06.parquet
+[2022-02-10 15:19:00,874] {gcs.py:251} INFO - Total Bytes: 126726779 | Bytes Written: 126726779
+[2022-02-10 15:19:00,875] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-06.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-06.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:00,957] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-06.parquet deleted.
+[2022-02-10 15:19:00,959] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-12.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-12.parquet
+[2022-02-10 15:19:01,139] {gcs.py:251} INFO - Total Bytes: 125360614 | Bytes Written: 125360614
+[2022-02-10 15:19:01,140] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-12.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-12.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:01,222] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-12.parquet deleted.
+[2022-02-10 15:19:01,223] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-03.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-03.parquet
+[2022-02-10 15:19:01,695] {gcs.py:251} INFO - Total Bytes: 54378226 | Bytes Written: 54378226
+[2022-02-10 15:19:01,696] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-03.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-03.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:01,784] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-03.parquet deleted.
+[2022-02-10 15:19:01,785] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-10.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-10.parquet
+[2022-02-10 15:19:02,138] {gcs.py:251} INFO - Total Bytes: 2482 | Bytes Written: 2482
+[2022-02-10 15:19:02,139] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-10.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-10.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:02,221] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-10.parquet deleted.
+[2022-02-10 15:19:02,223] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-05.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-05.parquet
+[2022-02-10 15:19:02,372] {gcs.py:251} INFO - Total Bytes: 137418656 | Bytes Written: 137418656
+[2022-02-10 15:19:02,373] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-05.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-05.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:02,467] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-05.parquet deleted.
+[2022-02-10 15:19:02,469] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-12.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-12.parquet
+[2022-02-10 15:19:02,725] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:19:02,726] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-12.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-12.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:02,822] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-12.parquet deleted.
+[2022-02-10 15:19:02,828] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-05.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-05.parquet
+[2022-02-10 15:19:03,094] {gcs.py:251} INFO - Total Bytes: 7436367 | Bytes Written: 7436367
+[2022-02-10 15:19:03,095] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-05.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-05.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:03,174] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-05.parquet deleted.
+[2022-02-10 15:19:03,176] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-01.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-01.parquet
+[2022-02-10 15:19:03,521] {gcs.py:251} INFO - Total Bytes: 26074630 | Bytes Written: 26074630
+[2022-02-10 15:19:03,523] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-01.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-01.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:03,607] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-01.parquet deleted.
+[2022-02-10 15:19:03,609] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2022-01.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2022-01.parquet
+[2022-02-10 15:19:04,054] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:19:04,056] {gcs.py:264} INFO - Object raw/yellow_tripdata_2022-01.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2022-01.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:04,142] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2022-01.parquet deleted.
+[2022-02-10 15:19:04,144] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-10.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-10.parquet
+[2022-02-10 15:19:04,384] {gcs.py:251} INFO - Total Bytes: 31572830 | Bytes Written: 31572830
+[2022-02-10 15:19:04,385] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-10.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-10.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:04,476] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-10.parquet deleted.
+[2022-02-10 15:19:04,478] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-05.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-05.parquet
+[2022-02-10 15:19:04,872] {gcs.py:251} INFO - Total Bytes: 46674149 | Bytes Written: 46674149
+[2022-02-10 15:19:04,873] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-05.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-05.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:04,957] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-05.parquet deleted.
+[2022-02-10 15:19:04,958] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-08.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-08.parquet
+[2022-02-10 15:19:05,304] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:19:05,305] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-08.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-08.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:05,398] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-08.parquet deleted.
+[2022-02-10 15:19:05,401] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-11.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-11.parquet
+[2022-02-10 15:19:05,531] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:19:05,533] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-11.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-11.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:05,619] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-11.parquet deleted.
+[2022-02-10 15:19:05,621] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-09.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-09.parquet
+[2022-02-10 15:19:06,003] {gcs.py:251} INFO - Total Bytes: 120286338 | Bytes Written: 120286338
+[2022-02-10 15:19:06,005] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-09.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-09.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:06,099] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-09.parquet deleted.
+[2022-02-10 15:19:06,102] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-09.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-09.parquet
+[2022-02-10 15:19:06,447] {gcs.py:251} INFO - Total Bytes: 2481 | Bytes Written: 2481
+[2022-02-10 15:19:06,448] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-09.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-09.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:06,534] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-09.parquet deleted.
+[2022-02-10 15:19:06,536] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-03.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-03.parquet
+[2022-02-10 15:19:06,894] {gcs.py:251} INFO - Total Bytes: 144113501 | Bytes Written: 144113501
+[2022-02-10 15:19:06,896] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-03.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-03.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:07,009] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-03.parquet deleted.
+[2022-02-10 15:19:07,010] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-01.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-01.parquet
+[2022-02-10 15:19:07,374] {gcs.py:251} INFO - Total Bytes: 116228546 | Bytes Written: 116228546
+[2022-02-10 15:19:07,375] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-01.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-01.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:07,469] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-01.parquet deleted.
+[2022-02-10 15:19:07,471] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-04.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-04.parquet
+[2022-02-10 15:19:07,852] {gcs.py:251} INFO - Total Bytes: 136706305 | Bytes Written: 136706305
+[2022-02-10 15:19:07,854] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-04.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-04.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:07,944] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-04.parquet deleted.
+[2022-02-10 15:19:07,946] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-11.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-11.parquet
+[2022-02-10 15:19:08,358] {gcs.py:251} INFO - Total Bytes: 124810768 | Bytes Written: 124810768
+[2022-02-10 15:19:08,359] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-11.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-11.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:08,445] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-11.parquet deleted.
+[2022-02-10 15:19:08,447] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2021-04.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2021-04.parquet
+[2022-02-10 15:19:08,842] {gcs.py:251} INFO - Total Bytes: 40747225 | Bytes Written: 40747225
+[2022-02-10 15:19:08,843] {gcs.py:264} INFO - Object raw/yellow_tripdata_2021-04.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2021-04.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:08,956] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2021-04.parquet deleted.
+[2022-02-10 15:19:08,976] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-01.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-01.parquet
+[2022-02-10 15:19:09,263] {gcs.py:251} INFO - Total Bytes: 137625296 | Bytes Written: 137625296
+[2022-02-10 15:19:09,266] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-01.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-01.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:09,353] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-01.parquet deleted.
+[2022-02-10 15:19:09,354] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-07.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-07.parquet
+[2022-02-10 15:19:09,707] {gcs.py:251} INFO - Total Bytes: 115534598 | Bytes Written: 115534598
+[2022-02-10 15:19:09,708] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-07.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-07.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:09,792] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-07.parquet deleted.
+[2022-02-10 15:19:09,793] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-02.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-02.parquet
+[2022-02-10 15:19:09,940] {gcs.py:251} INFO - Total Bytes: 128380769 | Bytes Written: 128380769
+[2022-02-10 15:19:09,941] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-02.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-02.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:10,026] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-02.parquet deleted.
+[2022-02-10 15:19:10,027] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2019-08.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2019-08.parquet
+[2022-02-10 15:19:10,377] {gcs.py:251} INFO - Total Bytes: 111332831 | Bytes Written: 111332831
+[2022-02-10 15:19:10,380] {gcs.py:264} INFO - Object raw/yellow_tripdata_2019-08.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2019-08.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:10,467] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2019-08.parquet deleted.
+[2022-02-10 15:19:10,469] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-07.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-07.parquet
+[2022-02-10 15:19:10,818] {gcs.py:251} INFO - Total Bytes: 15762125 | Bytes Written: 15762125
+[2022-02-10 15:19:10,819] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-07.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-07.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:10,907] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-07.parquet deleted.
+[2022-02-10 15:19:10,909] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/yellow_tripdata_2020-04.parquet to gs://dtc_data_lake_vaulted-art-339212/yellow/_2020-04.parquet
+[2022-02-10 15:19:11,263] {gcs.py:251} INFO - Total Bytes: 5285861 | Bytes Written: 5285861
+[2022-02-10 15:19:11,265] {gcs.py:264} INFO - Object raw/yellow_tripdata_2020-04.parquet in bucket dtc_data_lake_vaulted-art-339212 rewritten to object yellow/_2020-04.parquet in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-10 15:19:11,352] {gcs.py:645} INFO - Blob raw/yellow_tripdata_2020-04.parquet deleted.
+[2022-02-10 15:19:11,383] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_2_gcs_dag, task_id=gcs_2_gcs_task, execution_date=20220209T173834, start_date=20220210T151856, end_date=20220210T151911
+[2022-02-10 15:19:11,444] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-10 15:19:11,545] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

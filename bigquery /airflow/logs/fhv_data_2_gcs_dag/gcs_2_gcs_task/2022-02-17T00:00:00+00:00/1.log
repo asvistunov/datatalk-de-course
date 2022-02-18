@@ -1,0 +1,59 @@
+[2022-02-18 12:30:50,947] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: fhv_data_2_gcs_dag.gcs_2_gcs_task scheduled__2022-02-17T00:00:00+00:00 [queued]>
+[2022-02-18 12:30:50,963] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: fhv_data_2_gcs_dag.gcs_2_gcs_task scheduled__2022-02-17T00:00:00+00:00 [queued]>
+[2022-02-18 12:30:50,964] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-18 12:30:50,965] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-02-18 12:30:50,966] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-18 12:30:50,987] {taskinstance.py:1259} INFO - Executing <Task(GCSToGCSOperator): gcs_2_gcs_task> on 2022-02-17 00:00:00+00:00
+[2022-02-18 12:30:50,995] {standard_task_runner.py:52} INFO - Started process 113 to run task
+[2022-02-18 12:30:51,001] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'fhv_data_2_gcs_dag', 'gcs_2_gcs_task', 'scheduled__2022-02-17T00:00:00+00:00', '--job-id', '1066', '--raw', '--subdir', 'DAGS_FOLDER/fhv_data_2_gcs_dag.py', '--cfg-path', '/tmp/tmpq26sd15m', '--error-file', '/tmp/tmp9jkvv53a']
+[2022-02-18 12:30:51,003] {standard_task_runner.py:77} INFO - Job 1066: Subtask gcs_2_gcs_task
+[2022-02-18 12:30:51,101] {logging_mixin.py:109} INFO - Running <TaskInstance: fhv_data_2_gcs_dag.gcs_2_gcs_task scheduled__2022-02-17T00:00:00+00:00 [running]> on host 853fb9201673
+[2022-02-18 12:30:51,187] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=fhv_data_2_gcs_dag
+AIRFLOW_CTX_TASK_ID=gcs_2_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-17T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-17T00:00:00+00:00
+[2022-02-18 12:30:51,190] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-02-18 12:30:51,192] {gcs_to_gcs.py:346} INFO - Delimiter ignored because wildcard is in prefix
+[2022-02-18 12:30:51,471] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-01.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-01.csv
+[2022-02-18 12:30:51,943] {gcs.py:251} INFO - Total Bytes: 1301971512 | Bytes Written: 1301971512
+[2022-02-18 12:30:51,944] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-01.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-01.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:51,945] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-05.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-05.csv
+[2022-02-18 12:30:52,308] {gcs.py:251} INFO - Total Bytes: 116105375 | Bytes Written: 116105375
+[2022-02-18 12:30:52,309] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-05.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-05.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:52,310] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-06.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-06.csv
+[2022-02-18 12:30:52,738] {gcs.py:251} INFO - Total Bytes: 111937857 | Bytes Written: 111937857
+[2022-02-18 12:30:52,740] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-06.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-06.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:52,741] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-10.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-10.csv
+[2022-02-18 12:30:53,120] {gcs.py:251} INFO - Total Bytes: 102789732 | Bytes Written: 102789732
+[2022-02-18 12:30:53,121] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-10.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-10.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:53,123] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-11.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-11.csv
+[2022-02-18 12:30:53,746] {gcs.py:251} INFO - Total Bytes: 92765260 | Bytes Written: 92765260
+[2022-02-18 12:30:53,749] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-11.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-11.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:53,751] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-09.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-09.csv
+[2022-02-18 12:30:54,160] {gcs.py:251} INFO - Total Bytes: 58838964 | Bytes Written: 58838964
+[2022-02-18 12:30:54,161] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-09.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-09.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:54,162] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-03.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-03.csv
+[2022-02-18 12:30:54,541] {gcs.py:251} INFO - Total Bytes: 75662300 | Bytes Written: 75662300
+[2022-02-18 12:30:54,543] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-03.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-03.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:54,544] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-12.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-12.csv
+[2022-02-18 12:30:54,903] {gcs.py:251} INFO - Total Bytes: 99542630 | Bytes Written: 99542630
+[2022-02-18 12:30:54,904] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-12.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-12.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:54,905] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-08.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-08.csv
+[2022-02-18 12:30:55,256] {gcs.py:251} INFO - Total Bytes: 104016725 | Bytes Written: 104016725
+[2022-02-18 12:30:55,259] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-08.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-08.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:55,261] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-04.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-04.csv
+[2022-02-18 12:30:55,623] {gcs.py:251} INFO - Total Bytes: 108555126 | Bytes Written: 108555126
+[2022-02-18 12:30:55,624] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-04.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-04.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:55,625] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-02.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-02.csv
+[2022-02-18 12:30:55,984] {gcs.py:251} INFO - Total Bytes: 97117784 | Bytes Written: 97117784
+[2022-02-18 12:30:55,986] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-02.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-02.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:55,988] {gcs_to_gcs.py:431} INFO - Executing copy of gs://dtc_data_lake_vaulted-art-339212/raw/fhv_tripdata_2019-07.csv to gs://dtc_data_lake_vaulted-art-339212/fhv/fhv_tripdata_2019-07.csv
+[2022-02-18 12:30:56,370] {gcs.py:251} INFO - Total Bytes: 108520644 | Bytes Written: 108520644
+[2022-02-18 12:30:56,371] {gcs.py:264} INFO - Object raw/fhv_tripdata_2019-07.csv in bucket dtc_data_lake_vaulted-art-339212 rewritten to object fhv/fhv_tripdata_2019-07.csv in bucket dtc_data_lake_vaulted-art-339212
+[2022-02-18 12:30:56,407] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=fhv_data_2_gcs_dag, task_id=gcs_2_gcs_task, execution_date=20220217T000000, start_date=20220218T123050, end_date=20220218T123056
+[2022-02-18 12:30:56,493] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-18 12:30:56,579] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
